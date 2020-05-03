@@ -42,9 +42,8 @@ section {
 }
 
 .line {
-    background: black;
-    height: 1px;
     border: none;
+    border-top: 1px solid black;
     margin-top: 15px;
 }
 
