@@ -1,0 +1,240 @@
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+#resumeContainer {
+    margin: auto;
+    width: 720px;
+}
+
+#resume {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+header, section {
+    padding: 0 5px 0;
+}
+
+h3 {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+header h3 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex: 0 0 130px;
+}
+
+section {
+    display: flex;
+}
+
+.line {
+    background: black;
+    height: 1px;
+    border: none;
+    margin-top: 15px;
+}
+
+.contact {
+    font-size: 13px;
+    margin: 5px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact li {
+    list-style: none;
+}
+
+.contact a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact li + li::before {
+    content: "•";
+    margin: 0 10px;
+}
+
+.positions,
+.projects,
+.knowledge,
+.interests {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.position:last-child,
+.project:last-child {
+    margin-bottom: 0;
+}
+
+.position,
+.project {
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.position__title,
+.project__title {
+    font-family: 'Lato', sans-serif;
+}
+
+.position__description,
+.project__description {
+    margin: 0;
+}
+
+.position__row,
+.project__row,
+.knowledge__row,
+.interest__row,
+.education__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    font-size: 13px;
+}
+
+.position__metadata,
+.project__metadata {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+.position__metadata li + li::before,
+.project__metadata li + li::before {
+    content: "•";
+    margin: 0 5px;
+}
+
+.education {
+    margin-left: 15px;
+    font-size: 12px;
+    width: 100%;
+}
+
+.education__years {
+    font-size: 11px;
+}
+
+.education__college,
+.education__degree {
+    font-size: 12px;
+}
+
+.education__honors {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+.education__honors ul,
+.knowledge__areas,
+.interest__areas {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.education__honors li:after,
+.knowledge__areas li:after,
+.interest__areas li:after {
+    content: ",";
+    margin-right: 3px;
+}
+
+.education__honors li:last-of-type:after,
+.knowledge__areas li:last-of-type:after,
+.interest__areas li:last-of-type:after {
+    content: none;
+    margin-right: 0;
+}
+
+.knowledge__row,
+.interest__row {
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.knowledge__category,
+.interest__category {
+    flex: 0 0 78px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    #resumeContainer {
+        width: 100%;
+        height: 100%;
+    }
+
+    section,
+    header,
+    .contact,
+    .education__honors ul,
+    [class$='__row'],
+    [class$='__metadata'] {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    section h3 {
+        flex: 1 0 auto;
+    }
+
+    .positions,
+    .projects,
+    .education,
+    .knowledge,
+    .interests {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .education__honors ul {
+        padding-left: 25px;
+        list-style-type: disc;
+    }
+    
+    .contact li + li:before,
+    [class$='__metadata'] li + li:before,
+    .education__honors li:after {
+        content: none;
+        margin: 0;
+    }
+
+    [class$='__category'] {
+        flex: 1 0 auto;
+        margin: 0;
+    }
+}
